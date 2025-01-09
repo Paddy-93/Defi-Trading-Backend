@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS", // Keep module as CommonJS, appropriate for Node.js
+        "target": "ES2020", // ES2020 is fine, ensures async/await and modern features
+        "esModuleInterop": true, // Allows default imports from modules that don't have a default export
+        "resolveJsonModule": true, // Allows importing JSON modules
+        "strict": true, // Enables strict type checking
+        "outDir": "./dist", // Output compiled files to 'dist' directory
+        "rootDir": "./src", // Root directory for source files
+        "moduleResolution": "node", // Use Node.js module resolution strategy
+        "types": ["node", "express", "express-session"] // Add types for Express and express-session
+    },
+    "include": [
+        "src/**/*",
+        "./scripts" // Include your custom scripts if any
+    ],
+    "exclude": [
+        "node_modules",
+        "dist" // Exclude the dist folder (compiled files)
+    ]
+}
